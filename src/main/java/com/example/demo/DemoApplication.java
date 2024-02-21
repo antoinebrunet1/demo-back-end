@@ -14,11 +14,4 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner commandLineRunner(QuestionRepository questionRepository) {
-		return args -> {
-			questionRepository.save(new Question(null, "What is the capital of Canada?", 0, "Antoine Brunet"));
-			questionRepository.save(new Question(null, "What is the capital of Ontario?", 1, "Antoine Brunet"));
-		};
-	}
 }
